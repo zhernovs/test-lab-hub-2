@@ -3,9 +3,11 @@ image: ubuntu
 quasi_pr_build:
   tags: 
     - docker-prod
-  script: echo 'Your PR is awesome'
-  only:
-    - external_pull_requests
+  script: 
+    - echo 'env vars:'
+    - env
+  except:
+    - master
 
 quasi_master_build:
   tags: 
