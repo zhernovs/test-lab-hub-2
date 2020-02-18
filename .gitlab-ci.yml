@@ -1,6 +1,7 @@
 image: ubuntu
 quasi_build:
-  tags: docker-prod
+  tags: 
+    - docker-prod
   script: echo 'Your build is awesome'
   only:
     - external_pull_requests
