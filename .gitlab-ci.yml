@@ -1,7 +1,15 @@
 image: ubuntu
-quasi_build:
+
+quasi_pr_build:
   tags: 
     - docker-prod
-  script: echo 'Your build is awesome'
+  script: echo 'Your PR is awesome'
   only:
     - external_pull_requests
+
+quasi_master_build:
+  tags: 
+    - docker-prod
+  script: echo 'Your master is awesome'
+  only:
+    - master
