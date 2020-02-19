@@ -6,6 +6,15 @@ quasi_pr_build:
   script: 
     - echo 'env vars:'
     - env
+  only:
+    - external_pull_requests
+
+quasi_non_master_build:
+  tags: 
+    - docker-prod
+  script: 
+    - echo 'env vars:'
+    - env
   except:
     - master
 
